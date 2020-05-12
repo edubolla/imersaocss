@@ -1,0 +1,43 @@
+body{
+    background-image: url(' https://static.vecteezy.com/system/resources/previews/000/115/488/original/free-vector-soft-color-degrade-background.jpg');
+    font-family: Roboto;
+    background-size: auto 100vw;
+    height: 100vh;
+  }
+  .site-title{
+    background: whitesmoke;
+    color: #555;
+    text-align: center;
+    width: 50vw;
+    border: 1px solid #555;
+    padding: 20px;
+    margin: 50px auto;
+    box-shadow: 8px 8px 10px #333;
+  }
+  .site-subtitle{
+    color: #555;
+    text-align: center;
+    padding: 20px;
+    margin: 100px 0 0 0;
+  }
+  
+  .menu{
+    background: white;
+  }
+  .menu ul{
+    display: flex;
+    justify-content: space-around;
+  }
+  .menu li{
+    list-style: none;
+    padding: 10px 50px;
+  }
+  
+  a{
+    text-decoration: none;
+  }
+  a:hover{
+    text-decoration: underline;
+    background-color: yellowgreen;
+  }
+  
