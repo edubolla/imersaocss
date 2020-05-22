@@ -1,28 +1,51 @@
-body{
-    background-image: url(' https://static.vecteezy.com/system/resources/previews/000/115/488/original/free-vector-soft-color-degrade-background.jpg');
-    font-family: Roboto;
+*{
+  /* reset CSS - O asterisco pega todos os elementos e aplica as propriedades*/
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+  body{
+    /*background-image: url(' https://static.vecteezy.com/system/resources/previews/000/115/488/original/free-vector-soft-color-degrade-background.jpg');*/
+    background-color: lightsalmon;
+    font-family: 'Open Sans', sans-serif;
     background-size: auto 100vw;
     height: 100vh;
-  }
-  .site-title{
-    background: whitesmoke;
-    color: #555;
-    text-align: center;
-    width: 50vw;
-    border: 1px solid #555;
-    padding: 20px;
-    margin: 50px auto;
-    box-shadow: 8px 8px 10px #333;
-  }
-  .site-subtitle{
-    color: #555;
-    text-align: center;
-    padding: 20px;
-    margin: 100px 0 0 0;
+    font-size: 10px;
   }
   
-  .menu{
+  @media (min-width: 400px){
+    body{
+      font-size: 12px;
+    }
+  }
+  @media (min-width: 600px){
+    body{
+      font-size: 14px;
+    }
+  }
+  @media (min-width: 1200px){
+    body{
+      font-size: 18px;
+    }
+  }
+
+
+  header{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+   .menu{
     background: white;
+    font-size: 14px;
+    font-weight: bold;
+    position: fixed;
+    top: 0;
+    width: 100vw;
+    z-index: 1;
   }
   .menu ul{
     display: flex;
@@ -30,14 +53,119 @@ body{
   }
   .menu li{
     list-style: none;
-    padding: 10px 50px;
   }
-  
+  .menu a{
+    display: block;
+    padding: 10px 20px;
+    transition: text-shadow 1s, color 2s;
+  }
+  .menu a:active, .menu a:hover{
+    text-shadow: 0 0 10px rgb(187, 124, 99);
+    text-decoration: underline;
+    color: #555;
+  }
   a{
     text-decoration: none;
   }
-  a:hover{
-    text-decoration: underline;
-    background-color: yellowgreen;
+
+  .titulo{
+    animation: linear 2s animacaoTitulo forwards;
+  }
+
+  @keyframes animacaoTitulo{
+    0% {
+      transform: scale(0.2) translateY(30vh);
+      opacity: 0;
+    }
+    100%{
+      transform: scale(1) translateY(0);
+      opacity: 1;
+    }
   }
   
+  .site-title, .site-subtitle{
+    color: #555;
+    text-align: center;
+    width: 50vw;
+    padding: 20px;
+    margin: 50px auto;
+  }
+  .site-title{
+    background: whitesmoke;
+    border: 1px solid #555;
+    margin: 50px auto;
+    box-shadow: 8px 8px 10px #333;
+  }
+  .site-subtitle {
+    font-style: italic;
+    line-height: 1.8em;
+  }
+
+  .portfolio, .contato {
+    background-color: #222;
+    padding: 2em;
+    min-height: 100vh;
+  }
+  .portfolio h2, .contato h2{
+    color: white;
+    line-height: 3em;
+    margin-bottom: 1.5em;
+    font-size: 2em;
+    
+  }
+  .portfolio .grid{
+    display: grid;
+    gap: 2em;
+  }
+@media (min-width: 560px){
+  .portfolio .grid{
+    grid-template-columns: 240px 240px;
+  }
+}
+@media (min-width: 880px){
+  .portfolio .grid{
+    grid-template-columns: repeat(3, 260px);
+    justify-content: center;
+    align-content: center;
+    height: calc(100vh - 48px - 8em);
+  }
+}
+
+  .portfolio figure{
+    text-align: center;
+  }
+  .portfolio figcaption{
+    color: white;
+  }
+
+  .img-portfolio{
+    width: 240px;
+    height: 180px;
+    object-fit: cover;
+    object-position: left bottom;
+    border-radius: 5px;
+    transition: transform 500ms;
+  }
+
+  .img-portfolio:hover{
+    transform: scale(1.2) rotate(45deg);
+  }
+
+  .contato .icons{
+    text-align: center;
+  }
+
+  .contato a{
+    color: white;
+    font-size: 5em;
+    transition: text-shadow 1s;
+  }
+
+  .contato a:active{
+    text-decoration: none;
+    text-shadow: 0 0 10px lightsalmon;
+  }
+  .contato a:active, .contato a:hover{
+        text-decoration: none;
+        text-shadow: 0 0 10px lightsalmon;
+  }
